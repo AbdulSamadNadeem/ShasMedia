@@ -14,7 +14,7 @@ const Form = () => {
   const onSubmit = async (data) => {
     try {
       const storeRes = await axios.post(
-        "http://localhost:3000/shasmedia/storeemail",
+        "https://shas-backend-t4mt.vercel.app/api/shasmedia/storeemail",
         {
           email: data.email,
           phone: data.phone,
@@ -27,7 +27,7 @@ const Form = () => {
       reset();
 
       const sendRes = await axios.post(
-        "http://localhost:3000/shasmedia/sendemail"
+        "https://shas-backend-t4mt.vercel.app/api/shasmedia/sendemail"
       );
       toast.success(sendRes.data.message || "You will get a response soon 😊 ");
     } catch (e) {
@@ -36,7 +36,8 @@ const Form = () => {
       } else {
         toast.error("Something went wrong ❌");
       }
-      console.error("Error in onSubmit:", e);
+      console.error("Error in onSubmit:");
+      console.log(e)
     }
   };
 
