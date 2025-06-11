@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@font-face {
+    font-family: 'logo';
+    src: url("/public/Font/EduNSWACTCursive-VariableFont_wght.ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+}
